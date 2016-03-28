@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode7.3
+install: true
+script:
+  - set -o pipefail
+  - xcodebuild test -scheme SwiftMD5 -configuration Debug | xcpretty -c
