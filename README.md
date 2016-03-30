@@ -19,7 +19,7 @@ import SwiftMD5
 Usage for raw bytes
 -------------------
 ```swift
-let bytes = [Byte]("The quick brown fox jumps over the lazy dog.".utf8)
+let bytes = [Byte]("The quick brown fox jumps over the lazy dog".utf8)
 // md5 outputs a 16-byte digest
 
 let encodedBytes: [Byte] = md5(bytes)
