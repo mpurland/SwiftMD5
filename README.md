@@ -6,6 +6,28 @@ SwiftMD5
 
 SwiftMD5 is a pure Swift implementation for the MD5 algorithm.
 
+Usage
+-----
+
+```swift
+import SwiftMD5
+
+"The quick brown fox jumps over the lazy dog".md5
+// "9e107d9d372bb6826bd81d3542a419d6"
+```
+
+Usage for raw bytes
+-------------------
+```swift
+let bytes = [Byte]("The quick brown fox jumps over the lazy dog.".utf8)
+// md5 outputs a 16-byte digest
+
+let encodedBytes: [Byte] = md5(bytes)
+// [158, 16, 125, 157, 55, 43, 182, 130, 107, 216, 29, 53, 66, 164, 25, 214]
+// Each byte would normally be encoded to a padded hexadecimal in a string
+// 9e107d9d372bb6826bd81d3542a419d6
+```
+
 Setup
 -----
 
