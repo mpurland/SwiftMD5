@@ -10,6 +10,21 @@ class SwiftMD5Tests: XCTestCase {
         XCTAssertEqual("abc".md5, "900150983cd24fb0d6963f7d28e17f72")
     }
     
+    func testMD5Checksum() {
+        let strings = [
+            "The quick brown fox jumps over the lazy dog",
+            "The quick brown fox jumps over the lazy dog.",
+            "",
+            "md5",
+            "abc"
+        ]
+        
+        for str in strings {
+            let bytes = [Byte](str.utf8)
+            XCTAssertEqual(str.md5, md5(bytes).checksum)
+        }
+    }
+    
     func testEncodeMD5Digest() {
         XCTAssertEqual("The quick brown fox jumps over the lazy dog".md5, encodeMD5Digest([158, 16, 125, 157, 55, 43, 182, 130, 107, 216, 29, 53, 66, 164, 25, 214]))
         XCTAssertEqual("The quick brown fox jumps over the lazy dog.".md5, encodeMD5Digest([228, 217, 9, 194, 144, 208, 251, 28, 160, 104, 255, 173, 223, 34, 203, 208]))
