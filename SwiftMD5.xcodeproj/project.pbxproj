@@ -11,7 +11,6 @@
 		DE5D681D1CA9C4AC001154B6 /* SwiftMD5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5D68121CA9C4AC001154B6 /* SwiftMD5.framework */; };
 		DE5D68221CA9C4AC001154B6 /* SwiftMD5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D68211CA9C4AC001154B6 /* SwiftMD5Tests.swift */; };
 		DE5D682D1CA9C4BB001154B6 /* SwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D682C1CA9C4BB001154B6 /* SwiftMD5.swift */; };
-		DE5D682F1CA9C535001154B6 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D682E1CA9C535001154B6 /* StringExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +31,6 @@
 		DE5D68211CA9C4AC001154B6 /* SwiftMD5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMD5Tests.swift; sourceTree = "<group>"; };
 		DE5D68231CA9C4AC001154B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5D682C1CA9C4BB001154B6 /* SwiftMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMD5.swift; sourceTree = "<group>"; };
-		DE5D682E1CA9C535001154B6 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +76,6 @@
 				DE5D68151CA9C4AC001154B6 /* SwiftMD5.h */,
 				DE5D68171CA9C4AC001154B6 /* Info.plist */,
 				DE5D682C1CA9C4BB001154B6 /* SwiftMD5.swift */,
-				DE5D682E1CA9C535001154B6 /* StringExt.swift */,
 			);
 			path = SwiftMD5;
 			sourceTree = "<group>";
@@ -200,7 +197,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE5D682F1CA9C535001154B6 /* StringExt.swift in Sources */,
 				DE5D682D1CA9C4BB001154B6 /* SwiftMD5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +388,7 @@
 				DE5D68281CA9C4AC001154B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE5D68291CA9C4AC001154B6 /* Build configuration list for PBXNativeTarget "SwiftMD5Tests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +397,7 @@
 				DE5D682B1CA9C4AC001154B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

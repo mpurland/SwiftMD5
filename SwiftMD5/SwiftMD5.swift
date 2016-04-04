@@ -1,3 +1,5 @@
+// MARK: - Utilities
+
 public typealias Byte = UInt8
 typealias Word = UInt32
 
@@ -20,6 +22,8 @@ private func I(b: Word, _ c: Word, _ d: Word) -> Word {
 private func rotateLeft(x: Word, by: Word) -> Word {
     return ((x << by) & 0xFFFFFFFF) | (x >> (32 - by))
 }
+
+// MARK: - Calculating a MD5 digest of bytes from bytes
 
 public func md5(bytes: [Byte]) -> [Byte] {
     // Initialization
@@ -178,4 +182,34 @@ public func md5(bytes: [Byte]) -> [Byte] {
     assert(digest.count == 16)
     
     return digest
+}
+
+// MARK: - Encoding a MD5 digest of bytes to a string
+
+public func encodeMD5Digest(digest: [Byte]) -> String {
+    assert(digest.count == 16)
+    
+    let str = digest.reduce("") { str, byte in
+        let radix = 16
+        let s = String(byte, radix: radix)
+        // Ensure byte values less than 16 are padding with a leading 0
+        let sum = str + (byte < Byte(radix) ? "0" : "") + s
+        return sum
+    }
+    
+    return str
+}
+
+// MARK: - String extension
+
+extension String {
+    public var md5: String {
+        return encodeMD5Digest(md5Digest)
+    }
+    
+    public var md5Digest: [Byte] {
+        let bytes = [Byte](self.utf8)
+        let digest = SwiftMD5.md5(bytes)
+        return digest
+    }
 }
